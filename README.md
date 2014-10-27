@@ -33,22 +33,16 @@ To see how this example works, you will need to create a storage collection or t
 
 * Once your collection is created. Click on 'Add column' and add a column. For example, call your column 'name'
 
-* Click on 'Add Row' to create a new entry. Set the name value to "foo".
+* Click on 'Add Row' to create a new entry. Set the id value to "123" and the name value to "foo".
 
 * Notice in the console that there are now two extra fields added: 'last-modified-by' which contians the ID of the user which created the entry (Note: the user's 'id' is not the same as their username) and a 'last-modified-at' which is the timestamp.
 
-* If you access the storage directly without being logged in as an admin (For instance by viewing one of the resources under http://localhost:8080/metadatascript/storage/test/) then the 'last-modified' fields should not be visible.
+* If you access the storage directly without being logged in as an admin (For instance by viewing one of the resources under http://localhost:8080/metadatascript/storage/test/123) then the 'last-modified' fields should not be visible.
 
 ```
-id: "product123"
-name: "Large Mug"
-description: "A large mug, perfect for coffee"
-price: 8.95
+id: "123"
+name: "foo"
 ```
-
-* Try and create a new entry, but this time by leaving out a one of the fields or using an invalid price value (eg -0.99, 0.9, "8.95", "$8.95", "5 dollars", ...). You should receive an error and your new entry will not be added to the storage.
-
-* Or try and update an already existing entry but removing one of the required fields. The updated value should not be saved to storage.
 
 
 Script
