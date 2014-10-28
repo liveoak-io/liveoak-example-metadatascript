@@ -1,6 +1,7 @@
 {
   "id" : "metadatascript",
   "name" : "metadatascript",
+  "example" : true,
   "resources" : {
     "client" : {
       "type" : "aggregating-filesystem",
