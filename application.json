@@ -45,12 +45,7 @@
     "storage" : {
       "type" : "mongo",
       "config" : {
-        "db" : "LiveOakExamples-MetadataScript",
-        "servers" : [ {
-          "host" : "localhost",
-          "port" : 27017
-        } ],
-        "credentials" : [ ]
+        "db" : "LiveOakExamples-MetadataScript"
       }
     },
     "scripts" : {
