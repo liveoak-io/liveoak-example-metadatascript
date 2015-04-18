@@ -1,6 +1,5 @@
 {
-  "id" : "metadatascript",
-  "name" : "metadatascript",
+  "name" : "${application.id}",
   "example" : "metadatascript",
   "resources" : {
     "client" : {
@@ -18,11 +17,11 @@
       "config" : {
         "policies" : [ {
           "policyName" : "URIPolicy",
-          "policyResourceEndpoint" : "/metadatascript/uri-policy/authzCheck"
+          "policyResourceEndpoint" : "/${application.id}/uri-policy/authzCheck"
         }, {
           "policyName" : "ACLPolicy",
-          "policyResourceEndpoint" : "/metadatascript/acl-policy/authzCheck",
-          "includedResourcePrefixes" : [ "/metadatascript" ]
+          "policyResourceEndpoint" : "/${application.id}/acl-policy/authzCheck",
+          "includedResourcePrefixes" : [ "/${application.id}" ]
         } ]
       }
     },
@@ -45,7 +44,7 @@
     "storage" : {
       "type" : "mongo",
       "config" : {
-        "db" : "LiveOakExamples-MetadataScript"
+        "db" : "${application.id}"
       }
     },
     "scripts" : {
